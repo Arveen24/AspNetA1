@@ -1,0 +1,31 @@
+﻿@page
+@model CourseRegProg.Pages.StudentsModel
+@{
+    ViewData["Title"] = "Students";
+}
+
+<h1>Students</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Student ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var student in Model.Students)
+        {
+            <tr>
+                <td>@student.StudentId</td>
+                <td>@student.FirstName</td>
+                <td>@student.LastName</td>
+                <td>@student.Email</td>
+                <td>@student.PhoneNumber</td>
+            </tr>
+        }
+    </tbody>
+</table>
